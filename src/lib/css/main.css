@@ -1,0 +1,27 @@
+ summary::-webkit-details-marker {
+ color: #00ACF3;
+ font-size: 125%;
+ margin-right: 2px;
+}
+summary:focus {
+	outline-style: none;
+}
+article > details > summary {
+	font-size: 28px;
+	margin-top: 16px;
+}
+details > p {
+	margin-left: 24px;
+	font-size: 12px;
+}
+details details {
+	margin-left: 36px;
+}
+details details summary {
+	font-size: 16px;
+}
+
+details[open] summary::-webkit-details-marker {
+    background: url(http://image.flaticon.com/icons/svg/309/309655.svg) center no-repeat;
+    color: transparent;
+}

@@ -96,3 +96,59 @@ for (var [key, value] of result) {
 result.forEach((value,key)=>{
  console.log(value)
 })
+----get childs--
+
+function process (obj, func) {
+    func(obj);
+      children=obj.children
+    if (children && children.length!==0 ) {
+       children.forEach(function (children) {
+            process(children, func);
+        });
+    }
+}
+
+let elID=myObj.id
+var template = "<details><summary></summary></details>";
+var familyTree = new Map();
+let mother=$(template).attr("id", elID).find("summary").html(myObj.name).end();
+familyTree.set(myObj.id,mother)
+
+
+
+process(myObj, function (obj) {
+    children=obj.children
+   if (children && children.length!==0 ){
+        if(children.length===1){
+             children.map(child=>{
+              let ch=$(template).attr("id", child.id).addClass(child._id).find("summary").html(child.name).end(); 
+              familyTree.set(child.id,ch)
+              console.log(child.name+' is the only child of '+ obj.name)
+            })
+        } else {
+             children.map(child=>{
+              let ch=$(template).attr("id", child.id).addClass(child._id).find("summary").html(child.name).end(); 
+              familyTree.set(child.id,ch)
+              console.log(child.name+' is the one of a child of '+ obj.name)
+            })
+        }
+      console.log(obj.name +  ' has no more child')  
+   } else {
+     console.log(obj.name + ' has no child')
+   }
+});
+
+
+familyTree.forEach((value,key)=>{
+         $('body').append(value)
+                   })
+
+"ann is the child of Fatih" summary.anna
+"Fatih has no more child"
+"kahn is the child of ann" summary.kahn
+"tırıvır is the child of ann"
+"ann has no more child"
+"kahn has no child"
+"bir is the child of tırıvır"
+"tırıvır has no more child"
+"bir has no child"
