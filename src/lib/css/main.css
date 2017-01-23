@@ -25,3 +25,8 @@ details[open] summary::-webkit-details-marker {
     background: url(http://image.flaticon.com/icons/svg/309/309655.svg) center no-repeat;
     color: transparent;
 }
+
+.alone {
+    font-size: 18px;
+    margin-left: 56px;
+}

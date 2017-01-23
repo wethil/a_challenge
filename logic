@@ -151,4 +151,42 @@ familyTree.forEach((value,key)=>{
 "kahn has no child"
 "bir is the child of tırıvır"
 "tırıvır has no more child"
-"bir has no child"
+"bir has no child
+
+----delete----
+function process (obj, func) {
+    func(obj);
+
+    if (obj.children && obj.children.length!==0 ) {
+       obj.children.forEach(function (children) {
+            process(children, func);
+        });
+    }
+}
+
+process(myObj, function (obj) {
+    children=obj.children
+   if (children && children.length!==0 ){
+             children.map(child=>{
+             // console.log(child.name+' is the only child of '+ obj.name)
+              child.anc_id=myObj.id
+            });
+   }
+});
+
+process(myObj, function (obj) {
+    children=obj.children
+   if (children && children.length!==0 ){
+             children.map((child,index)=>{
+               if(child.id==1){
+                children.splice(index,1)
+               }
+               if(children.length===0){
+                 delete obj.children
+               }
+            });
+   }
+});
+
+
+----------

@@ -1,32 +1,32 @@
 const  people = [
   {
-    "id" :0,
-    "name":"Fatih",
+    "ID" :0,
+    "Name":"Fatih",
     "surname":"Dogru"
   },
    {
-    "id" :1,
-    "name":"ann",
+    "ID" :1,
+    "Name":"ann",
     "surname":"julu",
-    "p_id":0
+    "parentID":0
   },
    {
-    "id" :2,
-    "name":"kahn",
+    "ID" :2,
+    "Name":"kahn",
     "surname":"bolo",
-    "p_id":1
+    "parentID":1
   },
    {
-    "id" :3,
-    "name":"tırıvır",
+    "ID" :3,
+    "Name":"tırıvır",
     "surname":"moko",
-    "p_id":1
+    "parentID":1
   },
   {
-    "id" :4,
-    "name":"bir",
+    "ID" :4,
+    "Name":"bir",
     "surname":"körebe",
-    "p_id":3
+    "parentID":3
   },
   
 ];
