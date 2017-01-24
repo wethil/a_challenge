@@ -4,7 +4,7 @@
   "description": "adphorus frontend challenge",
   "main": "index.jsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js"
   },
   "author": "Fatih Dogru",
@@ -24,6 +24,7 @@
     "babel-preset-stage-0": "^6.22.0",
     "css-loader": "^0.26.1",
     "express": "^4.14.0",
+    "jest": "^18.1.0",
     "react-hot-loader": "^1.3.1",
     "style-loader": "^0.13.1",
     "webpack-dev-middleware": "^1.9.0",
