@@ -1,4 +1,4 @@
 # Adphorus frontend challenge
-##### npm start -> localhost:3000
-##### npm test ->	test with jest
+##### npm start : npm install -> npm start -> localhost:3000
+##### test (with [Jest](https://facebook.github.io/jest/)) :  npm test 
 
