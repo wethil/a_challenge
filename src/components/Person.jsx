@@ -32,13 +32,13 @@ import emitter from './emitter.js'
 		
 		content = <details>
 		 				<summary>
-		 					<h5 className="ui grey header" style={styles.personWchild} >
+		 					<h4 className="ui grey header" style={styles.personWchild} >
 								<i className="users icon" style={styles.uIcon} ></i>
 								<div className="content" style={styles.pContent}>
 									{Name} <span style={{fontSize:'0.78em'}} > from </span> {City} <span style={{color:'#212121'}} > {Phone} </span>
 					 				<i onClick={()=>emitter.emit('delete',person,poor)} style={styles.trashIcon} className="trash outline icon"></i>
 								</div>
-							</h5>
+							</h4>
 		 				</summary>
 		 					{childs}
 		 			</details>
@@ -46,13 +46,13 @@ import emitter from './emitter.js'
 			childs.push( <Person person={p}  mLeft={mLeft+2} poor={poor} /> )
 		}); 
 	} else {
-		 content =	<h5 className="ui grey header" style={styles.personWOUTchild} >
+		 content =	<h4 className="ui grey header" style={styles.personWOUTchild} >
 						<i className="user icon" style={styles.uIcon} ></i>
 						<div className="content" style={styles.pContent} >
 							{Name} <span style={{fontSize:'0.78em'}} > from </span> {City} <span style={{color:'#212121'}} > {Phone} </span>
 			 				<i onClick={()=>emitter.emit('delete',person,poor)} style={styles.trashIcon} className="trash outline icon"></i>
 						</div>
-					</h5>
+					</h4>
 	}	
 
 	return content
